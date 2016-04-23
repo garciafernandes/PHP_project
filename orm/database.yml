@@ -1,0 +1,100 @@
+user:
+  login: varchar(255)
+  email: varchar(255)
+  password: varchar(255)
+  cookie: varchar(255)
+
+adress:
+  adressFacture: varchar(45)
+  adressLivraison: varchar(45)
+  user_id: int
+  user_panier_id: int   
+  
+produit:
+  nom: varchar(255)
+  description: varchar(255)
+  annee: datetime
+  prix: float
+  langue: varchar(255)
+  sous-categorie_id: int
+  sous-categorie_categorie_id: int
+  panier_id: int
+  panier_user_id: int
+  user_id: int
+  
+categorie:
+  nom: varchar(45)
+  
+commentaire: 
+  message: varchar(255)
+  auteur: varchar(45)
+  date: date
+  etoile: varchar(45)
+  produit_id: int
+  produit_sous-categorie_id: int
+  produit_sous_categorie_categorie_id: int
+  
+extrait:
+  titre: varchar(45)
+  duree: datetime
+  prix: float
+  medias: varchar(45)
+  produit-musique_id: int
+  produit-musique_produit_id: int
+  produit_musique_produit_sous-categorie_id: int
+  produit-musique_produit_sous-categorie_categorie_id: int
+  
+panier: 
+  fdp: varchar(45)
+  user_id: int
+  
+bd:
+  resume: varchar(45)
+  auteur: varchar(45)
+  editeur: varchar(45)
+  produit_id: int
+  produit_sous-categorie_id: int
+  produit_sous-categorie_categorie_id: int
+  
+film:
+  acteur: varchar(45)
+  realisateur: varchar(45)
+  duree: time
+  synopsis: varchar(45)
+  produit_id: int
+  produit_sous-categorie_id: int
+  produit_sous-categorie_categorie_id: int
+  
+jeu: 
+  createur: varchar(45)
+  produit_id: int
+  produit_sous-categorie_id: int
+  produit_sous-categorie_categorie_id: int
+  
+musique:
+  artiste: varchar(45)
+  auteur: varchar(45)
+  interprete: varchar(45)
+  produit_id: int
+  produit_sous-categorie_id: int
+  produit_sous-categorie_categorie_id: int
+  
+serie:
+  realisateur: varchar(45)
+  acteur: varchar(45)
+  duree: time
+  format: varchar(45)
+  synopsis: varchar(255)
+  produit_id: int
+  produit_sous-categorie_id: int
+  produit_sous-categorie_categorie_id: int
+  
+souscategorie:
+  nom: varchar(45)
+  description: varchar(255)
+  genre: varchar(45)
+  categorie_id: int
+  
+stock:
+  quantite: int
+  arrivage: varchar(45)
