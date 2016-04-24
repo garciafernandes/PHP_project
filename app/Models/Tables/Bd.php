@@ -17,16 +17,16 @@ class Bd extends Entity {
     public $auteur;     // varchar(45)
     public $editeur;     // varchar(45)
     public $produit_id;     // int
-    public $produit_sous-categorie_id;     // int
-    public $produit_sous-categorie_categorie_id;     // int
+    public $produit_souscategorie_id;     // int
+    public $produit_souscategorie_categorie_id;     // int
 
     public function __construct(
         $resume = "",
         $auteur = "",
         $editeur = "",
         $produit_id = "",
-        $produit_sous-categorie_id = "",
-        $produit_sous-categorie_categorie_id = "",
+        $produit_souscategorie_id = "",
+        $produit_souscategorie_categorie_id = "",
     $id = false) {
         parent::__construct($id);
 
@@ -34,8 +34,8 @@ class Bd extends Entity {
         $this->auteur = $auteur;
         $this->editeur = $editeur;
         $this->produit_id = $produit_id;
-        $this->produit_sous-categorie_id = $produit_sous-categorie_id;
-        $this->produit_sous-categorie_categorie_id = $produit_sous-categorie_categorie_id;
+        $this->produit_souscategorie_id = $produit_souscategorie_id;
+        $this->produit_souscategorie_categorie_id = $produit_souscategorie_categorie_id;
     }
 }
 ?>

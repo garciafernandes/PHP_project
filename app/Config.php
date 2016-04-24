@@ -30,12 +30,12 @@ class Config
         /**
          * Define the complete site URL.
          */
-        define('SITEURL', 'http://localhost:88/projetdev/');
+        define('SITEURL', 'http://localhost:88/php_project/');
 
         /**
          * Define relative base path.
          */
-        define('DIR', '/projetdev/');
+        define('DIR', '/php_project/');
 
         /**
          * Set the Application Router.

@@ -18,8 +18,8 @@ class Commentaire extends Entity {
     public $date;     // date
     public $etoile;     // varchar(45)
     public $produit_id;     // int
-    public $produit_sous-categorie_id;     // int
-    public $produit_sous_categorie_categorie_id;     // int
+    public $produit_souscategorie_id;     // int
+    public $produit_souscategorie_categorie_id;     // int
 
     public function __construct(
         $message = "",
@@ -27,8 +27,8 @@ class Commentaire extends Entity {
         $date = "",
         $etoile = "",
         $produit_id = "",
-        $produit_sous-categorie_id = "",
-        $produit_sous_categorie_categorie_id = "",
+        $produit_souscategorie_id = "",
+        $produit_souscategorie_categorie_id = "",
     $id = false) {
         parent::__construct($id);
 
@@ -37,8 +37,8 @@ class Commentaire extends Entity {
         $this->date = $date;
         $this->etoile = $etoile;
         $this->produit_id = $produit_id;
-        $this->produit_sous-categorie_id = $produit_sous-categorie_id;
-        $this->produit_sous_categorie_categorie_id = $produit_sous_categorie_categorie_id;
+        $this->produit_souscategorie_id = $produit_souscategorie_id;
+        $this->produit_souscategorie_categorie_id = $produit_souscategorie_categorie_id;
     }
 }
 ?>

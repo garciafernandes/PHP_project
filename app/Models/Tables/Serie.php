@@ -19,8 +19,8 @@ class Serie extends Entity {
     public $format;     // varchar(45)
     public $synopsis;     // varchar(255)
     public $produit_id;     // int
-    public $produit_sous-categorie_id;     // int
-    public $produit_sous-categorie_categorie_id;     // int
+    public $produit_souscategorie_id;     // int
+    public $produit_souscategorie_categorie_id;     // int
 
     public function __construct(
         $realisateur = "",
@@ -29,8 +29,8 @@ class Serie extends Entity {
         $format = "",
         $synopsis = "",
         $produit_id = "",
-        $produit_sous-categorie_id = "",
-        $produit_sous-categorie_categorie_id = "",
+        $produit_souscategorie_id = "",
+        $produit_souscategorie_categorie_id = "",
     $id = false) {
         parent::__construct($id);
 
@@ -40,8 +40,8 @@ class Serie extends Entity {
         $this->format = $format;
         $this->synopsis = $synopsis;
         $this->produit_id = $produit_id;
-        $this->produit_sous-categorie_id = $produit_sous-categorie_id;
-        $this->produit_sous-categorie_categorie_id = $produit_sous-categorie_categorie_id;
+        $this->produit_souscategorie_id = $produit_souscategorie_id;
+        $this->produit_souscategorie_categorie_id = $produit_souscategorie_categorie_id;
     }
 }
 ?>

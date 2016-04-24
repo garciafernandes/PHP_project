@@ -17,20 +17,20 @@ class Extrait extends Entity {
     public $duree;     // datetime
     public $prix;     // float
     public $medias;     // varchar(45)
-    public $produit-musique_id;     // int
-    public $produit-musique_produit_id;     // int
-    public $produit_musique_produit_sous-categorie_id;     // int
-    public $produit-musique_produit_sous-categorie_categorie_id;     // int
+    public $produit_musique_id;     // int
+    public $produit_musique_produit_id;     // int
+    public $produit_musique_produit_souscategorie_id;     // int
+    public $produit_musique_produit_souscategorie_categorie_id;     // int
 
     public function __construct(
         $titre = "",
         $duree = "",
         $prix = "",
         $medias = "",
-        $produit-musique_id = "",
-        $produit-musique_produit_id = "",
-        $produit_musique_produit_sous-categorie_id = "",
-        $produit-musique_produit_sous-categorie_categorie_id = "",
+        $produit_musique_id = "",
+        $produit_musique_produit_id = "",
+        $produit_musique_produit_souscategorie_id = "",
+        $produit_musique_produit_souscategorie_categorie_id = "",
     $id = false) {
         parent::__construct($id);
 
@@ -38,10 +38,10 @@ class Extrait extends Entity {
         $this->duree = $duree;
         $this->prix = $prix;
         $this->medias = $medias;
-        $this->produit-musique_id = $produit-musique_id;
-        $this->produit-musique_produit_id = $produit-musique_produit_id;
-        $this->produit_musique_produit_sous-categorie_id = $produit_musique_produit_sous-categorie_id;
-        $this->produit-musique_produit_sous-categorie_categorie_id = $produit-musique_produit_sous-categorie_categorie_id;
+        $this->produit_musique_id = $produit_musique_id;
+        $this->produit_musique_produit_id = $produit_musique_produit_id;
+        $this->produit_musique_produit_souscategorie_id = $produit_musique_produit_souscategorie_id;
+        $this->produit_musique_produit_souscategorie_categorie_id = $produit_musique_produit_souscategorie_categorie_id;
     }
 }
 ?>
