@@ -8,6 +8,9 @@
 
 namespace App\Controllers;
 
+use App\Models;
+use App\Models\Queries\ProduitSQL;
+use App\Models\Tables\Produit;
 use Core\View;
 use Core\Controller;
 use Helpers\Session;
@@ -17,6 +20,7 @@ use Helpers\Session;
  */
 class Welcome extends Controller
 {
+   
     /**
      * Call the parent construct
      */
@@ -31,9 +35,10 @@ class Welcome extends Controller
      */
     public function index()
     {
-        /*$data['title'] = $this->language->get('welcomeText');
-        $data['welcomeMessage'] = $this->language->get('welcomeMessage');*/
-				
+		$produitsql = new ProduitSQL();
+		$result = $produitsql->prepareFindAll()->execute();
+		$data['result'] = $result; 
+		
         View::renderTemplate('header', $data);
 		View::render('Welcome/Welcome', $data);
         View::renderTemplate('footer', $data);

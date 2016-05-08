@@ -21,6 +21,7 @@ Router::any('subpage', 'App\Controllers\Welcome@subPage');
 
 
 Router::any('mon-compte/gestion-profil', 'App\Controllers\Compte@gestionProfil');
+Router::any('mon-compte/voir-compte', 'App\Controllers\Compte@voirCompte');
 
 //User Routing :
 Router::any('/utilisateur/inscription', 'App\Modules\User\User@register');

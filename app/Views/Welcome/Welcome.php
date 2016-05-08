@@ -1,13 +1,20 @@
 <!--<div class="page-header">
-	<h1><?=$title;?></h1>
+	
 </div>
 
-<p><?=$welcomeMessage;?></p>
+
 
 <a class="btn btn-md btn-success" href="<?=DIR;?>subpage">
 	<?php echo Language::show('openSubPage', 'Welcome'); ?>
 </a>-->
 
+<a href="<?=DIR;?>mon-compte/voir-compte">Chez Test</a>
+
 <div class="container">
-	<p>Home</p>
+	<?php 
+		foreach($result as $p) {
+			echo "<p>".$p->nom."</p>";
+			echo "<p>".$p->description."</p>";
+		}
+	?>
 </div>
