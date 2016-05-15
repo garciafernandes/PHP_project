@@ -19,7 +19,8 @@ $router = Router::getInstance();
 Router::any('', 'App\Controllers\Welcome@index');
 Router::any('subpage', 'App\Controllers\Welcome@subPage');
 
-
+Router::any('mon-compte/gestion-adresses', 'App\Controllers\Compte@gestionAdresses');
+Router::any('mon-compte/modifier-adresses', 'App\Controllers\Compte@modifierAdresse');
 Router::any('mon-compte/gestion-profil', 'App\Controllers\Compte@gestionProfil');
 Router::any('mon-compte/voir-compte', 'App\Controllers\Compte@voirCompte');
 

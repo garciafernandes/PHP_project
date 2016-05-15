@@ -11,6 +11,8 @@ namespace App\Controllers;
 use App\Models;
 use App\Models\Queries\UserSQL;
 use App\Models\Tables\User;
+use App\Models\Queries\AdressSQL;
+use App\Models\Table\Adress;
 use Core\View;
 use Core\Controller;
 use Helpers\Session;
@@ -22,14 +24,13 @@ use	Helpers\DB\Entity;
 class Compte extends Controller
 {
 	
-	private $userSQL;
+	
     /**
      * Call the parent construct
      */
     public function __construct()
     {
         parent::__construct();
-	$this->userSQL = new UserSQL();
         $this->language->load('Welcome');
     }
 	
@@ -52,7 +53,9 @@ class Compte extends Controller
     public function gestionProfil()
     {
 		
-		if (isset($_POST['submit'])) {
+		$user = new UserSQL();
+		
+	if (isset($_POST['submit'])) {
 				$login = $_POST['login'];
 				$email = $_POST['email'];
 				$password = $_POST['password'];
@@ -62,30 +65,37 @@ class Compte extends Controller
 			$postdata = array(
 							'login' => $login,
 							'email' => $email,
-							'password' => $password );
+							'password' => $password 
+						);
 							
-			
-			EntityManager::update($postdata);
-			//$data['resultat'] = $resultat;
+			EntityManager::getInstance()->save($user);
 			echo 'Modification terminée';
 		 }
-	   
 	   
         View::renderTemplate('header', $data);
 		View::render('Compte/gestionProfil', $data);
         View::renderTemplate('footer', $data);
     }
 
-    /**
-     * Define Subpage page title and load template files
-     */
-    public function subPage()
+   
+    public function gestionAdresses()
     {
-       /* $data['title'] = $this->language->get('subpageText');
-        $data['welcomeMessage'] = $this->language->get('subpageMessage');*/
+		$sql = new AdressSQL();	
+		
+		$data['adress'] = $sql->prepareFindWithCondition('user_id  = ( SELECT id FROM user )')->execute();
+		$adress = $data['adress'];
 
         View::renderTemplate('header', $data);
-        View::render('Welcome/SubPage', $data);
+        View::render('Compte/gestionAdresses', $data);
         View::renderTemplate('footer', $data);
     }
+	
+	public function modifierAdresse() 
+	{
+		
+		
+		View::renderTemplate('header', $data);
+        View::render('Compte/modifierAdresse', $data);
+        View::renderTemplate('footer', $data);
+	}
 }
